@@ -8,6 +8,7 @@ export async function GET() {
   
   return new NextResponse(fileContents, {
     status: 200,
+    credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
     },

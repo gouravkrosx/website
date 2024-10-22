@@ -32,7 +32,7 @@ module.exports = withBundleAnalyzer({
       //   pathname: "**",
       // },
     ],
-    domains: ["web-stories.keploy.io.s3.amazonaws.com"],
+    domains: ["web-stories.keploy.io.s3.amazonaws.com",""],
     unoptimized: true,
   },
 });
