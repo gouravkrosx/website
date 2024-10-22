@@ -9,15 +9,7 @@
       "destination": "https://blog-website-phi-eight.vercel.app/blog/:slug*"
     }
   ],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "git": {
-          "submodules": true
-        }
-      }
-    }
-  ]
+  "git": {
+    "submodules": true
+  }
 }
