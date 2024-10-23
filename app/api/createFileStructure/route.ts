@@ -31,7 +31,7 @@ export async function OPTIONS(request: Request) {
 export async function POST(request: Request) {
   const response = NextResponse.json({ data: 'your data' });
   
-  response.headers.set('Access-Control-Allow-Origin', 'https://kwebsite-git-atg-sonichigos-projects.vercel.app');
+  response.headers.set('Access-Control-Allow-Origin', 'https://landing-page.staging.keploy.io');
   response.headers.set('Access-Control-Allow-Credentials', 'true');
   
   return response;
