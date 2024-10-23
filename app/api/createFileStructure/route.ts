@@ -20,7 +20,7 @@ export async function OPTIONS(request: Request) {
   return new NextResponse(null, {
     status: 204,
     headers: {
-      'Access-Control-Allow-Origin': 'https://kwebsite-git-atg-sonichigos-projects.vercel.app',
+      'Access-Control-Allow-Origin': 'https://landing-page.staging.keploy.io',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Allow-Credentials': 'true',
