@@ -16,7 +16,26 @@ const pathsMap: { [key: string]: string } = {
   Python: 'components/atg/demo-projects/projects/python',
   // Add more paths as needed
 };
+export async function OPTIONS(request: Request) {
+  return new NextResponse(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': 'https://kwebsite-git-atg-sonichigos-projects.vercel.app',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Credentials': 'true',
+    },
+  });
+}
 
+export async function POST(request: Request) {
+  const response = NextResponse.json({ data: 'your data' });
+  
+  response.headers.set('Access-Control-Allow-Origin', 'https://kwebsite-git-atg-sonichigos-projects.vercel.app');
+  response.headers.set('Access-Control-Allow-Credentials', 'true');
+  
+  return response;
+}
 export async function GET(
   req: NextRequest
 ): Promise<NextResponse<Directory | ErrorResponse>> {
