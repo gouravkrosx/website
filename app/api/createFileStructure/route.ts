@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Directory } from '@/components/atg/Editor/utils/file-manager';
 import { createFileStructure } from '@/components/atg/Editor/utils/File-Structure';
 import { join } from 'path';
-import { existsSync } from 'fs';
+import { existsSync ,readdirSync} from 'fs';
 
 interface ErrorResponse {
   message: string;
@@ -29,6 +29,9 @@ export async function GET(
 
   const basePath = process.cwd();
   const projectPath = join(basePath, pathsMap[projectKey]);
+
+  console.log('Available directories(basePath):', readdirSync(basePath));
+
   // Check if path exists before proceeding
   if (!existsSync(projectPath)) {
     console.error(`Path does not exist: ${projectPath}`);
